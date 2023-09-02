@@ -4,9 +4,18 @@ import renderAdviceId from "./renderAdviceId.js";
 
 // Get data from API
 export default async function getData() {
-  const response = await fetch("https://api.adviceslip.com/advice");
-  const data = await response.json();
+  try {
+    const response = await fetch("https://api.adviceslip.com/advice");
 
-  renderAdvice(data);
-  renderAdviceId(data);
+    if (!response.ok) {
+      throw new Error("Resource or server issue)");
+    }
+
+    const data = await response.json();
+
+    renderAdvice(data);
+    renderAdviceId(data);
+  } catch (error) {
+    console.log(error);
+  }
 }
