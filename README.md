@@ -36,5 +36,8 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- Mobile-first workflow
+- Vanilla JavaScripts
+- Fetch API
 - Advice Slip JSON API
+- ES6 Modules
+- Mobile-first workflow
